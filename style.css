@@ -66,15 +66,20 @@ body {
     min-height: 150px;
 }
 
+#main-div {
+    width: 100%;
+}
+
 #main-content-div {
     width: 100%;
     background-color: peachpuff;
+    float: right;
+    width: 100%;
     min-height: 350px;
     font-weight: bold;
     color: black;
     text-align: center;
     line-height: 75px;
-    float: right;
 }
 
 .clearfix::after {
@@ -103,13 +108,13 @@ body {
 
 /* The sidebar menu */
 .sidenav {
-    height: 100vh; /* Full-height */
+    height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 135px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: lightcoral; /* Background color */
+    background-color: lightcoral; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
 }
@@ -128,69 +133,30 @@ body {
     color: saddlebrown;
 }
 
-/* Add this to make the sidebar responsive */
-@media screen and (max-width: 768px) {
-   .sidenav {
+/* Responsive design adjustments */
+@media only screen and (max-width: 600px) {
+    #logo-div, #nav-div {
         width: 100%;
-        height: auto;
+        float: none;
+        text-align: center;
+    }
+    #nav-div {
+        font-size: 10px;
+        line-height: 30px;
+    }
+    #headerbanner-div img {
+        min-height: 100px;
+    }
+    #footer-div {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .sidenav {
+        width: 100%;
         position: relative;
     }
-   .sidenav a {
-        text-align: center;
+    .sidenav a {
+        font-size: 10px;
         padding: 10px;
     }
 }
-
-/* Add this to make the layout responsive */
-@media screen and (max-width: 1200px) {
-    #wrapper-div {
-        width: 90%;
-    }
-    #main1-div {
-        width: 100%;
-    }
-    #logo-div {
-        width: 60%;
-    }
-    #nav-div {
-        width: 40%;
-    }
-    #headerbanner-div {
-        width: 100%;
-        min-height: 150px;
-    }
-    #main-content-div {
-        width: 100%;
-        min-height: 300px;
-    }
-    #footer-div {
-        width: 100%;
-        min-height: 20px;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    #wrapper-div {
-        width: 95%;
-    }
-    #main1-div {
-        width: 100%;
-    }
-    #logo-div {
-        width: 70%;
-    }
-    #nav-div {
-        width: 30%;
-    }
-    #headerbanner-div {
-        width: 100%;
-        min-height: 120px;
-    }
-    #main-content-div {
-        width: 100%;
-        min-height: 250px;
-    }
-    #footer-div {
-        width: 100%;
-        min-height
-    }
